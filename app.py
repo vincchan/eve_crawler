@@ -6,15 +6,12 @@ class ScienceDirectSpider(scrapy.Spider):
     name = 'crawler'
     selector_link_title = [
         '.result-list-title-link',
-        '.publication_title',
     ]
     selector_next_link = [
         'li.next-link a ::attr(href)',
-        '.pagination__btn--next ::attr(href)',
     ]
     base_url = [
         'https://www.sciencedirect.com',
-        '',
     ]
     start_urls = [
          [
@@ -31,20 +28,6 @@ class ScienceDirectSpider(scrapy.Spider):
             'https://www.sciencedirect.com/search?qs=Biodiversity%20%C2%ABeconomic%20valuation%C2%BB%20%C2%ABstated%20preference%C2%BB%20%C2%ABchoice%20modelling%C2%BB%20%C2%ABecosystem%20services%C2%BB&date=2000-2020&articleTypes=REV%2CFLA&show=50',
             'https://www.sciencedirect.com/search?qs=Biodiversity%20%C2%ABwillingness%20to%20pay%C2%BB%20%C2%ABstated%20preference%C2%BB%20%C2%ABchoice%20modelling%C2%BB%20%C2%ABecosystem%20services%C2%BB&date=2000-2020&articleTypes=REV%2CFLA&show=50',
         ],
-        [
-            'https://onlinelibrary.wiley.com/action/doSearch?AllField=Biodiversity+%C2%ABeconomic+valuation%C2%BB+%C2%ABvalue+of+nature%C2%BB+%C2%ABecosystem+services%C2%BB&PubType=journal&content=articlesChapters&countTerms=true&target=default&AfterYear=2000&BeforeYear=2020',
-            'https://onlinelibrary.wiley.com/action/doSearch?AfterYear=2000&AllField=Biodiversity+%C2%ABwillingness+to+pay%C2%BB+%C2%ABvalue+of+nature%C2%BB+%C2%ABecosystem+services%C2%BB&BeforeYear=2020&content=articlesChapters&countTerms=true&target=default&startPage=&PubType=journal',
-            'https://onlinelibrary.wiley.com/action/doSearch?AfterYear=2000&AllField=Biodiversity+%C2%ABeconomic+valuation%C2%BB+%C2%ABtravel+costs%C2%BB+%C2%ABecosystem+services%C2%BB&BeforeYear=2020&content=articlesChapters&countTerms=true&target=default&startPage=&PubType=journal',
-            'https://onlinelibrary.wiley.com/action/doSearch?AllField=Biodiversity+%C2%ABwillingness+to+pay%C2%BB+%C2%ABtravel+costs%C2%BB+%C2%ABecosystem+services%C2%BB&PubType=journal&content=articlesChapters&countTerms=true&target=default&AfterYear=2000&BeforeYear=2020',
-            'https://onlinelibrary.wiley.com/action/doSearch?AfterYear=2000&AllField=Biodiversity+%C2%ABeconomic+valuation%C2%BB+%C2%ABhedonic+pricing%C2%BB+%C2%ABecosystem+services%C2%BB&BeforeYear=2020&content=articlesChapters&countTerms=true&target=default&startPage=&PubType=journal',
-            'https://onlinelibrary.wiley.com/action/doSearch?AllField=Biodiversity+%C2%ABwillingness+to+pay%C2%BB+%C2%ABhedonic+pricing%C2%BB+%C2%ABecosystem+services%C2%BB&PubType=journal&content=articlesChapters&countTerms=true&target=default&AfterYear=2000&BeforeYear=2020',
-            'https://onlinelibrary.wiley.com/action/doSearch?AllField=Biodiversity+%C2%ABeconomic+valuation%C2%BB+%C2%ABstated+preference%C2%BB+%C2%ABcontingent+valuation%C2%BB+%C2%ABecosystem+services%C2%BB&PubType=journal&content=articlesChapters&countTerms=true&target=default&AfterYear=2000&BeforeYear=2020',
-            'https://onlinelibrary.wiley.com/action/doSearch?AllField=Biodiversity+%C2%ABwillingness+to+pay%C2%BB+%C2%ABstated+preference%C2%BB+%C2%ABcontingent+valuation%C2%BB+%C2%ABecosystem+services%C2%BB&PubType=journal&content=articlesChapters&countTerms=true&target=default&AfterYear=2000&BeforeYear=2020',
-            'https://onlinelibrary.wiley.com/action/doSearch?AllField=Biodiversity+%C2%ABeconomic+valuation%C2%BB+%C2%ABstated+preference%C2%BB+%C2%ABchoice+experiment%C2%BB+%C2%ABecosystem+services%C2%BB&PubType=journal&content=articlesChapters&countTerms=true&target=default&AfterYear=2000&BeforeYear=2020',
-            'https://onlinelibrary.wiley.com/action/doSearch?AllField=Biodiversity+%C2%ABwillingness+to+pay%C2%BB+%C2%ABstated+preference%C2%BB+%C2%ABchoice+experiment%C2%BB+%C2%ABecosystem+services%C2%BB&PubType=journal&content=articlesChapters&countTerms=true&target=default&AfterYear=2000&BeforeYear=2020',
-            'https://onlinelibrary.wiley.com/action/doSearch?AllField=Biodiversity+%C2%ABeconomic+valuation%C2%BB+%C2%ABstated+preference%C2%BB+%C2%ABchoice+modelling%C2%BB+%C2%ABecosystem+services%C2%BB&PubType=journal&content=articlesChapters&countTerms=true&target=default&AfterYear=2000&BeforeYear=2020',
-            'https://onlinelibrary.wiley.com/action/doSearch?AllField=Biodiversity+%C2%ABwillingness+to+pay%C2%BB+%C2%ABstated+preference%C2%BB+%C2%ABchoice+modelling%C2%BB+%C2%ABecosystem+services%C2%BB&PubType=journal&content=articlesChapters&countTerms=true&target=default&AfterYear=2000&BeforeYear=2020',
-        ]
     ]
 
     
