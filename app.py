@@ -48,10 +48,11 @@ class ScienceDirectSpider(scrapy.Spider):
         site_index = response.meta["site_index"]
         for title in response.css(self.selector_link_title[site_index]):
             title_property = w3lib.html.remove_tags(title.get())
+            url = title.attrib['href']
             set_len_old = len(self.result_set)
             self.result_set.add(title_property)
             if(len(self.result_set) > set_len_old):
-                yield {"title" : title_property}
+                yield {"title" : title_property, "url": self.base_url[site_index]+url}
             #yield {"title" : title_property}
 
         next_page = response.css(self.selector_next_link[site_index]).get()
